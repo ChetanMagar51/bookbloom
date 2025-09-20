@@ -135,6 +135,7 @@ public class Order {
         this.address = address;
     }
 
+    //get phone 
     public String getPhone() {
         return phone;
     }
