@@ -2,14 +2,14 @@ package bookbloom.com.servlets;
 
 import java.io.IOException;
 
+import bookbloom.com.dao.UserDAO;
+import bookbloom.com.entity.User;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import mcs.cm.dao.UserDAO;
-import mcs.cm.entity.User;
 
 @SuppressWarnings("serial")
 @WebServlet("/UserLoginServlet")
