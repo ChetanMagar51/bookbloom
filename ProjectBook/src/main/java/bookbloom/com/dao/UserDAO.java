@@ -4,8 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import mcs.cm.db.DBConnection;
-import mcs.cm.entity.User;
+import bookbloom.com.db.DBConnection;
+import bookbloom.com.entity.User;
 
 public class UserDAO {
 
