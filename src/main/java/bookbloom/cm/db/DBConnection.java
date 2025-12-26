@@ -12,7 +12,7 @@ public class DBConnection {
     public static Connection getConnection() {
         Connection conn = null;
         try {
-        	Class.forName("oracle.jdbc.driver.OracleDriver");
+        	Class.forName("oracle.jdbc.OracleDriver");
             conn = DriverManager.getConnection(URL, USER, PASSWORD);
             System.out.println("Database connected successfully!");
         } catch (Exception  e) {
