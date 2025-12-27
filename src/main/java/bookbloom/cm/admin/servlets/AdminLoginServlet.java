@@ -35,10 +35,10 @@ public class AdminLoginServlet extends HttpServlet {
             session.setAttribute("admin", admin);
            // response.sendRedirect("admin_dashboard.jsp");
             request.getRequestDispatcher("admin_dashboard.jsp").forward(request, response);
-            System.out.println("if block");
+//            System.out.println("if block");
             
         } else {
-        	 System.out.println("else block");
+//        	 System.out.println("else block");
              
            response.sendRedirect("admin_login.jsp?error=Invalid email or password");
         }
