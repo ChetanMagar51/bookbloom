@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebServlet("/AdminLoginServlet")
+@WebServlet("/admin/AdminLoginServlet")
 public class AdminLoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -34,13 +34,13 @@ public class AdminLoginServlet extends HttpServlet {
         if (admin != null) {
             session.setAttribute("admin", admin);
            // response.sendRedirect("admin_dashboard.jsp");
-            request.getRequestDispatcher("admin_dashboard.jsp").forward(request, response);
+            request.getRequestDispatcher("/admin/admin_dashboard.jsp").forward(request, response);
 //            System.out.println("if block");
             
         } else {
 //        	 System.out.println("else block");
              
-           response.sendRedirect("admin_login.jsp?error=Invalid email or password");
+           response.sendRedirect(request.getContextPath() +"/admin/admin_login.jsp?error=Invalid email or password");
         }
         
 //        if(adminDAO.login(email, password)) {
