@@ -107,9 +107,10 @@ if (admin == null) {
 %>
     <h2>Welcome, <%= admin.getName() %>!</h2>
     <h3>Admin Dashboard</h3>
-    <a href="uplaod.jsp" class="btn">📖 Add Book</a>
+    <a href="upload.jsp" class="btn">📖 Add Book</a>
     <a href="manage_books.jsp" class="btn">📚 Manage Books</a>
     <a href="AdminViewAllOrde" class="btn">📦 View Orders</a>
+   
     <a href="LogoutServlet" class="btn logout">🚪 Logout</a>
     
     <!-- <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button> -->
