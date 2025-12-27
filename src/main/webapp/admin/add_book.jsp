@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
-<%@ page import="bookbloom.cm.entity.Admin" %>
+<%@ page import="bookbloom.cm.entity.Admin"  %>
 <%
     Admin admin = (Admin) session.getAttribute("admin");
     if (admin == null) {
