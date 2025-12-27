@@ -104,7 +104,7 @@
     <h2>📚 Add New Book</h2>
     <form action="AddBookServlet" method="post" enctype="multipart/form-data">
         <input type="text" name="title" placeholder="Book Title" required>
-        <in put type="text" name="author" placeholder="Author Name" required>
+        <input type="text" name="author" placeholder="Author Name" required>
          <input type="number" name="price" placeholder="Price (₹)" required>
         <input type="number" name="stock" placeholder="stock" required>
         
