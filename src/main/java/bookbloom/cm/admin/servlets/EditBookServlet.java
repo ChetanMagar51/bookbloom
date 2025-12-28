@@ -38,7 +38,7 @@ public class EditBookServlet extends HttpServlet {
         	 request.getSession().setAttribute("message", "Book updated successfully!");
             response.sendRedirect(request.getContextPath() +"/admin/manage_books.jsp");
         } else {
-            response.sendRedirect(request.getContextPath() +" /admin/manage_books.jsp?msg=Error Updating Book");
+            response.sendRedirect(request.getContextPath() +"/admin/manage_books.jsp?msg=Error Updating Book");
         }
     }
 }
