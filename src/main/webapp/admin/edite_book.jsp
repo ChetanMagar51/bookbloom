@@ -139,42 +139,54 @@
 
 <div class="glass-card">
     <h2><i class="fas fa-pen-to-square me-1"></i> Edit Book</h2>
-    <form action="EditBookServlet" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<%= book.getId() %>">
+   <form action="<%= request.getContextPath() %>/admin/EditBookServlet"
+      method="post"
+      enctype="multipart/form-data">
 
-        <div class="form-group">
-            <label>Title</label>
-            <input type="text" name="title" value="<%= book.getTitle() %>" required>
-        </div>
+    <input type="hidden" name="id" value="<%= book.getId() %>">
+    <input type="hidden" name="oldImage" value="<%= book.getImageUrl() %>">
 
-        <div class="form-group">
-            <label>Author</label>
-            <input type="text" name="author" value="<%= book.getAuthor() %>" required>
-        </div>
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" name="title" value="<%= book.getTitle() %>" required>
+    </div>
 
-        <div class="form-group">
-            <label>Price</label>
-            <input type="number" step="0.01" name="price" value="<%= book.getPrice() %>" required>
-        </div>
+    <div class="form-group">
+        <label>Author</label>
+        <input type="text" name="author" value="<%= book.getAuthor() %>" required>
+    </div>
 
-        <%-- <div class="form-group">
-            <label>Image URL</label>
-            <input type="text" name="imageUrl" value="<%= request.getContextPath() + "/" +  book.getImageUrl() %>" required>
-        </div> --%>
-        
-        <div class="form-group">
-        <label for="image" class="form-label">Upload Book Image</label>
-        <input type="file" id="image" name="image" accept="image/*" class="form-control" value="<%= request.getContextPath() + "/" +  book.getImageUrl() %>" required>
-      </div>
+    <div class="form-group">
+        <label>Price</label>
+        <input type="number" step="0.01" name="price" value="<%= book.getPrice() %>" required>
+    </div>
+    
+    <div class="form-group">
+        <label>Stock</label>
+        <input type="number" step="0.01" name="stock" value="<%= book.getStock() %>" required>
+    </div>
+    
+     <div class="form-group">
+        <label>description</label>
+        <input type="text" name="description" value="<%= book.getDescription() %>" required>
+    </div>
 
-        <div class="actions">
-            <button type="submit"><i class="fas fa-save me-1"></i> Update Book</button>
-            <button type="button" class="secondary-btn" onclick="history.back()">
-                <i class="fas fa-arrow-left me-1"></i> Go Back
-            </button>
-            <a href="manage_books.jsp" class="cancel-link">Cancel and go to Manage Books</a>
-        </div>
-    </form>
+    <!-- SHOW CURRENT IMAGE -->
+    <div class="form-group">
+        <label>Current Image</label><br>
+        <img src="<%= request.getContextPath() + "/" + book.getImageUrl() %>"
+             width="100" style="border-radius:8px;">
+    </div>
+
+    <!-- OPTIONAL NEW IMAGE -->
+    <div class="form-group">
+        <label>Change Image (Optional)</label>
+        <input type="file" name="image" accept="image/*">
+    </div>
+
+    <button type="submit">Update Book</button>
+</form>
+
 </div>
 
 </body>
