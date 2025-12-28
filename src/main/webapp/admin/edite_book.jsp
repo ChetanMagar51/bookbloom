@@ -159,7 +159,7 @@
 
         <div class="form-group">
             <label>Image URL</label>
-            <input type="text" name="imageUrl" value="<%= book.getImageUrl() %>" required>
+            <input type="text" name="imageUrl" value="<%= request.getContextPath() + "/" +  book.getImageUrl() %>" required>
         </div>
 
         <div class="actions">
