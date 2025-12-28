@@ -76,15 +76,17 @@ public class OrderSaveServlet extends HttpServlet {
             order.setTotalPrice(total);
             order.setPhone(phone);
             
+            System.out.println("this is total price "+total);
+            
             boolean done = new OrderDAO().saveOrder(order);
             
             if(done)
             {
             	Book book =  new BookDAO().getBookById(bookid);
-            	int t = book.getStock();
-            	boolean r = new BookDAO().AlterBookQuantity(bookid, t-quantity );
+//            	int t = book.getStock();
+//            	boolean r = new BookDAO().AlterBookQuantity(bookid, t-quantity );
             	String title = book.getTitle();
-            	double p = total*quantity;
+//            	double p = total*quantity;
             	
             	
             	// Set attributes for confirmation page
