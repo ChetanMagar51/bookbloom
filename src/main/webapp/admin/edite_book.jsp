@@ -139,7 +139,7 @@
 
 <div class="glass-card">
     <h2><i class="fas fa-pen-to-square me-1"></i> Edit Book</h2>
-    <form action="EditBookServlet" method="post">
+    <form action="EditBookServlet" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<%= book.getId() %>">
 
         <div class="form-group">
@@ -157,10 +157,15 @@
             <input type="number" step="0.01" name="price" value="<%= book.getPrice() %>" required>
         </div>
 
-        <div class="form-group">
+        <%-- <div class="form-group">
             <label>Image URL</label>
             <input type="text" name="imageUrl" value="<%= request.getContextPath() + "/" +  book.getImageUrl() %>" required>
-        </div>
+        </div> --%>
+        
+        <div class="form-group">
+        <label for="image" class="form-label">Upload Book Image</label>
+        <input type="file" id="image" name="image" accept="image/*" class="form-control" value="<%= request.getContextPath() + "/" +  book.getImageUrl() %>" required>
+      </div>
 
         <div class="actions">
             <button type="submit"><i class="fas fa-save me-1"></i> Update Book</button>
