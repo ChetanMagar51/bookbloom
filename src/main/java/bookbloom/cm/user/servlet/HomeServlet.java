@@ -26,15 +26,6 @@ public class HomeServlet extends HttpServlet {
         // Set books in request scope
         request.setAttribute("bookList", bookList);
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
         // Forward to home.jsp
         request.getRequestDispatcher("home.jsp").forward(request, response);
