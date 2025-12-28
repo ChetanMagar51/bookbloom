@@ -91,6 +91,9 @@ public class OrderDAO {
               order.setPaymentMethod(rs.getString("payment_method"));
                 order.setPaymentDetails(rs.getString("payment_details"));
                order.setOrderDate(rs.getTimestamp("order_date"));
+               order.setTotalPrice(rs.getDouble("TOTAL_PRICE"));
+               order.setName("name");
+               order.setEmail("email");
                 orders.add(order);
             }
         } catch (SQLException e) {
